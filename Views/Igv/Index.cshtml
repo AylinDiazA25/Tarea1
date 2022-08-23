@@ -1,0 +1,41 @@
+@model igvDiazAylin.Models.Igv
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+ <h1>CALCULADORA DE IGV</h1>
+ <label for="nom">Nombre del producto:</label><br>
+  <input type="text" id="nom" name="nom"><br>
+
+  <label for="des">Descripción:</label><br>
+  <input type="text" id="des" name="des">
+
+  <label for=""></label><br>
+  
+  <label for="pes">Peso:</label><br>
+  <input type="text" id="pes" name="pes">
+
+  <label for=""></label><br>
+
+    <label for="uni">Unidad:</label><br>
+  <input type="text" id="uni" name="uni">
+  
+   <label for=""></label><br>
+
+  <label for="pre">Precio del producto:</label><br>
+<form asp-controller="Igv" asp-action="Calcular">
+    <input asp-for="Operador1" class="form-control"/>
+    
+  <label for=""></label><br>
+  
+    <button type="submit" class="btn btn-primary">Calcular</button> 
+</form>
+ <h1>@ViewData["Message"]</h1>
+</body>
+</html>
